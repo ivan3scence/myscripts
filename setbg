@@ -1,0 +1,14 @@
+#!/bin/bash
+
+wall='/home/ivan/.config/wall.png'
+
+if [ $# -eq 0 ]
+then
+  cp -f `find /home/ivan/pictures/wallpapers -type f |shuf -n 1` $wall
+else
+  cp $1 $wall
+fi
+echo "$wall"
+xwallpaper --zoom $wall&&wal -c&&wal -i /home >/dev/null&&sed -i '/SchemeUrg/d' /home/ivan/.cache/wal/colors-wal-dwm.h&&cd /usr/src/mydwm && sudo make clean install >/dev/null
+
+
