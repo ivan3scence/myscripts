@@ -24,3 +24,4 @@ case "$(printf "🔒 lock\n🚪 leave $WM\n♻️ renew $WM\n🐻 hibernate\n�
 	'📺 display off') xset dpms force off ;;
 	*) exit 1 ;;
 esac
+
